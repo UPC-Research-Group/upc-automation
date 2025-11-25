@@ -1,0 +1,33 @@
+
+Checks for required fields:
+- title
+- abstract
+- keywords
+- version
+- license (must be CC-BY-4.0)
+
+Outputs:
+- “Valid metadata” or  
+- Missing fields list
+
+---
+
+## 🔄 Workflow Integration
+Used during Pull Request review:
+1. Contributor updates files  
+2. Runs validator script  
+3. PR reviewer confirms script output  
+4. Merge after approval  
+
+These scripts ensure **strict quality control** without manual checking.
+
+---
+
+## 📐 License
+All scripts: **CC-BY-4.0**
+
+---
+
+## 📬 Contact
+UPC Research Group  
+research@upc.earth
