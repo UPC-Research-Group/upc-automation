@@ -1,0 +1,52 @@
+UPC Automation Guide
+
+This guide explains the automation scripts in the UPC Automation repository, designed to support metadata validation, OSF uploads, and workflow consistency.
+
+Purpose
+Automatically validate metadata files
+Assist with OSF uploads (future scripts)
+Maintain consistency across UPC repositories
+Automate repetitive tasks like versioning checks and naming validation
+
+Folder Structure
+/scripts/
+    validate_metadata.py    → Validate required metadata fields
+    osf_upload.py           → (optional future OSF upload script)
+
+/docs/
+    automation-guide.md     → This guide
+
+Using validate_metadata.py
+
+Run the script:
+python scripts/validate_metadata.py path/to/metadata.json
+
+
+Checks performed:
+Required fields:
+title
+abstract
+keywords
+version
+license (must be CC-BY-4.0)
+Outputs:
+“Valid metadata” if all fields are present
+List of missing fields if any are absent
+Workflow Integration
+Contributor updates repository files
+Runs validator script locally
+PR reviewer checks the output
+Merge only after validation passes
+This ensures strict quality control without manual checking.
+
+Future Enhancements
+osf_upload.py: automate uploads to OSF
+Batch validation for multiple files
+Logging and reporting validation results
+
+License
+All scripts and documentation: CC-BY-4.0
+
+Contact
+UPC Research Group
+research@upc.earth
